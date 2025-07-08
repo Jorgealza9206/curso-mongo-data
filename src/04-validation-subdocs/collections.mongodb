@@ -1,0 +1,34 @@
+use("platzi_store")
+
+db.createCollection('products', {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            properties: {
+                name: {
+                    bsonType: 'string'
+                },
+                sizes: {
+                    bsonType: 'array',
+                    uniqueItems: true,
+                    minItems:1,
+                    items: {
+                        bsonType: 'string'
+                    }
+                },
+                category: {
+                    bsonType: 'object',
+                    required: ['name'],
+                    properties: {
+                        name: {
+                            bsonType: 'string'
+                        },
+                        image: {
+                            bsonType: 'string'
+                        }
+                    },
+                }
+            }
+        }
+    }
+})
