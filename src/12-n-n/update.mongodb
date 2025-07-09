@@ -1,0 +1,14 @@
+use("platzi_store")
+
+db.products.updateOne(
+    {
+        _id: ObjectId('686ea20a7e9255f6ffa05e68')
+    },
+    {
+        $set: {
+            stores_ids: [
+                ObjectId('686ea30c23497fd9ffc6e61a')
+            ]
+        }
+    }
+)
