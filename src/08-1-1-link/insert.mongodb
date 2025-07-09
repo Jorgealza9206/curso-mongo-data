@@ -1,18 +1,16 @@
 use("platzi_store")
 
-db.users.insertOne({
-    email: 'zule@gmail.com',
-    password: 'z11jkduujsiuu',
-    role: 'customer',
-    social_accounts: ['twitter','facebook'],
-    address: {
-        street: 'cr 87 11',
-        city: 'Cali',
-        zip: '11011'
-    },
-    shipping_address: {
-        street: 'cr 232 12',
-        city: 'Cali',
-        zip: '11011'
+db.stores.insertOne({
+    storeId: 'ST001',
+    name: "Nico Store",
+    address: "Cr 87 1 11"
+})
+
+db.stores_details.insertOne({
+    storeId: 'ST001',
+    description: 'text text text',
+    manager: {
+        email: 'nico@gmail.com',
+        cellphone: '3196361190'
     }
 })
