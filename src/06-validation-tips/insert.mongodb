@@ -3,5 +3,6 @@ use("platzi_store")
 db.users.insertOne({
     email: 'nico@gmail.com',
     password: 'z11jkduujsiuu',
-    role: 'admin'
+    role: 'admin',
+    social_accounts: ['twitter','facebook']
 })

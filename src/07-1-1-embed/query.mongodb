@@ -1,0 +1,5 @@
+use("platzi_store") // Va a crear la base de datos sino está creada
+
+db.users.find({
+    "address.city": 'Bogotá'
+})
