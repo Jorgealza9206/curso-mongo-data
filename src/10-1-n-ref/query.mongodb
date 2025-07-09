@@ -1,4 +1,23 @@
 use("platzi_store") // Va a crear la base de datos sino está creada
 
+
+db.orders.find({ user_id: ObjectId('686ded949f030530659c9989')}).count()
+db.orders.find({ user_id: ObjectId('686ded49627d485855f952cd')}).count()
 db.users.find()
-db.orders.find({"items.qty": 3})
+db.orders.find()
+
+db.orders.aggregate([
+    {
+        $match: {
+            _id: ObjectId('686e9bc2fd6e43100c75a0d2')
+        }
+    },
+    {
+        $lookup: {
+            from: 'users',
+            localField: 'user_id',
+            foreignField: '_id',
+            as: 'user'
+        }
+    }
+])

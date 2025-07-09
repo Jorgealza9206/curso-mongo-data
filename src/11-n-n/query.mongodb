@@ -1,0 +1,4 @@
+use("platzi_store") // Va a crear la base de datos sino está creada
+
+db.products.find()
+
