@@ -2,3 +2,15 @@ use("platzi_store") // Va a crear la base de datos sino está creada
 
 db.products.find()
 
+db.stores.find()
+
+db.stores.aggregate([
+    {
+        $lookup: {
+          from: 'products',
+          localField: 'products_ids',
+          foreignField: '_id',
+          as: 'products'
+        }
+    }
+])

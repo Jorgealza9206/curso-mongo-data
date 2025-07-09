@@ -1,3 +1,19 @@
 use("platzi_store")
 
-db.orders.drop()
+db.stores.insertMany([
+    {
+        name: 'Store 1',
+        products_ids: [
+            ObjectId('686da2bc6068b328885dc7b1'),
+            ObjectId('686ea20a7e9255f6ffa05e69'),
+        ]
+    },
+        {
+        name: 'Store 2',
+        products_ids: [
+            ObjectId('686ea20a7e9255f6ffa05e68'),
+            ObjectId('686ea20a7e9255f6ffa05e69'),
+            ObjectId('686ea20a7e9255f6ffa05e6a'),
+        ]
+    },
+])
