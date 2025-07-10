@@ -1,4 +1,4 @@
 use("platzi_store") // Va a crear la base de datos sino está creada
 
 db.orders.find()
-db.orders.findOne({_id: ObjectId('686eafbdf90c8c29681fed2c')})
+db.orders.findOne({_id: ObjectId('687010f698d7a4d2dac39bc0')})
